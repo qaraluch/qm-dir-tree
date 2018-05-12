@@ -1,8 +1,8 @@
 const test = require("ava");
-const path = require("path");
+const nodePath = require("path");
 const { dirTree } = require("../index.js");
 
-const dirTreeTestPath = "./lib/walk/test/fixtures/";
+const dirTreeTestPath = "./test/fixtures/";
 
 let dirTreeOutput;
 
