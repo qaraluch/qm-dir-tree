@@ -1,7 +1,7 @@
 {
-  "name": "qm-XXX",
-  "version": "0.1.0",
-  "description": "YYY",
+  "name": "qm-dir-tree",
+  "version": "1.1.0",
+  "description": "Normalized dir tree.",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -12,10 +12,10 @@
     "email": "prezenciq@gmail.com",
     "url": "https://github.com/qaraluch"
   },
-  "homepage": "https://github.com/qaraluch/qm-XXX",
+  "homepage": "https://github.com/qaraluch/qm-dir-tree",
   "repository": {
     "type": "git",
-    "url": "https://github.com/qaraluch/qm-XXX.git"
+    "url": "https://github.com/qaraluch/qm-dir-tree.git"
   },
   "files": [
     "index.js"
