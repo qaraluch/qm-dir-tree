@@ -16,6 +16,12 @@ module.exports = {
         description: "ava test",
         script: "ava --verbose"
       }
+    },
+    examples: {
+      default: {
+        description: "run examples",
+        script: "node examples/run.js"
+      }
     }
   },
   options: {
