@@ -9,22 +9,41 @@ const mockupPath = "./test/fixtures";
 (async () => {
   try {
     //Execute:
-    const walkOutput = await dirTree({
+    const dirTreeOutput = await dirTree({
       path: mockupPath
     });
 
     //Saves:
     const save__dirTree = writeFile(
       "./examples/dirTree-tree.json",
-      JSON.stringify(walkOutput.tree, null, 2)
+      JSON.stringify(dirTreeOutput.tree, null, 2)
     );
 
     const save__dirTreeEntry = writeFile(
       "./examples/dirTree-entry.json",
-      JSON.stringify(walkOutput.entries[2], null, 2)
+      JSON.stringify(dirTreeOutput.entries[2], null, 2)
     );
 
-    await Promise.all([save__dirTree, save__dirTreeEntry]);
+    const save__dirTreeEntries = writeFile(
+      "./examples/dirTree-entries.json",
+      JSON.stringify(dirTreeOutput.entries, null, 2)
+    );
+
+    const save__dirTreePaths = writeFile(
+      "./examples/dirTree-paths.json",
+      JSON.stringify(
+        Object.values(dirTreeOutput.entries).map(item => item.path),
+        null,
+        2
+      )
+    );
+
+    await Promise.all([
+      save__dirTree,
+      save__dirTreeEntry,
+      save__dirTreeEntries,
+      save__dirTreePaths
+    ]);
   } catch (error) {
     console.error(error);
   }
