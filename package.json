@@ -30,6 +30,6 @@
     "prettier": "1.12.1"
   },
   "dependencies": {
-    "qm-walk": "1.1.0"
+    "qm-walk": "1.2.0"
   }
 }
