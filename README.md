@@ -19,14 +19,14 @@ const { dirTree } = require("qm-dir-tree");
 
 (async () => {
   const id = "11";
-  const tree = dirTree({ path: "some/path" }); // => { walk, entries, tree }
+  const tree = await dirTree({ path: "some/path" }); // => { walk, entries, tree }
 
-  const nodes = dirTree.getChildrensOfNode({ id, filter });
+  const nodes = tree.getChildrensOfNode({ id, filter });
   // filter: "all" //default
   // filter: "files" / "dirs"
   // => [{tree node item}, ...]
 
-  const entries = dirTree.getChildrensEntries({ id, filter, entryMapper });
+  const entries = tree.getChildrensOfNode({ id, filter, entryMapper });
   // when specified
   // returns childrens entries of the tree e.g.:
   // entryMapper: (entry => entry.name)
